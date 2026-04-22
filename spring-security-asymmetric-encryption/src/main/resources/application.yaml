@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-security-asymmetric-encryption
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    active: local
+
+
+app:
+  security:
+    jwt:
+      access-token-expiration-minutes: 86400000
+      refresh-token-expiration-minutes: 432000000
+    disposable-email: 10minutemail,20minutemail,33mail,5ymail,anonbox,guerrillamail,mailinator,maildrop,mailnesia,moakt,my10minutemail,throwawaymail,trashmail,temp-mail,tempmail,truemail,yopmail

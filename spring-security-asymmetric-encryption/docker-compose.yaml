@@ -1,0 +1,17 @@
+services:
+  postgres:
+    container_name: postgres-sql-spring-app
+    image: "18.1"
+    environment:
+      POSTGRES_USER: stroheim
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+      POSTGRES_DB: spring_app_db
+    volumes:
+      - postgres_data:/data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres:
